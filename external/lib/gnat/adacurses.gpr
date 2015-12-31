@@ -1,6 +1,6 @@
 library project ADACURSES is
 
-   for Languages use ("Ada");
+   for Languages use ("Ada", "C");
 
    for Source_Dirs use ("../../include/adacurses");
    for Library_Dir use "../../lib/adacurses";
@@ -8,8 +8,8 @@ library project ADACURSES is
    for Library_Kind use "static";
    for Externally_Built use "false";
 
-   --F11 package Linker is
-   --F11    for Linker_Options use ("-L/usr/local/lib", "-Wl,-R,/usr/local/lib");
-   --F11 end Linker;
+    package Linker is
+       for Linker_Options use ("-L/usr/local/lib", "-Wl,-R,/usr/local/lib");
+    end Linker;
 
 end ADACURSES;
