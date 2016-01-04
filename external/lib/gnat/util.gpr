@@ -9,7 +9,8 @@ library project Util is
    case BUILD is
       when "static" =>
          for Source_Dirs use ("../../include/util.static");
-         for Library_Dir use "../util.static";
+         for Library_Dir use "../../lib/util.static";
+         for Object_Dir  use "../../build/util.static";
          for Library_Kind use "static";
    end case;
 
